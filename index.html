@@ -1,11 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-light">
+    <header>
+      <nav class="navbar navbar-dark bg-dark mb-4">
+        <div class="container">
+          <span class="navbar-brand mb-0 h1">IPF - Galería de Superhéroes</span>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Agregar Superhéroe</h5>
+              <form id="form-personaje">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="imagen" class="form-label"
+                    >URL de la Imagen</label
+                  >
+                  <input type="url" class="form-control" id="imagen" required />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  Agregar al Catálogo
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="row mb-4">
+            <div class="col">
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="input-buscar"
+                  class="form-control"
+                  placeholder="Buscar personaje por nombre..."
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="btn-buscar"
+                >
+                  Buscar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+            id="contenedor-cards"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <div class="container">
+        <p class="mb-0">&copy; 2026 - Instituto Politécnico Formosa</p>
+        <small class="text-muted"
+          >Desarrollado por Hugo Escalante - Grupo N°8</small
+        >
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>

@@ -1,6 +1,5 @@
-const contenedorCards=document.querySelector('#contenedor-cards')
-
-
+const contenedorCards=document.querySelector('#contenedor-cards');
+const inputBuscar=document.querySelector('#input-buscar');
 const personajes = [
 { id: 1, nombre: "A-Bomb", imagen:
 "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg" },
@@ -40,3 +39,16 @@ function renderizarCatalogo(listaPersonajes){
 document.addEventListener('DOMContentLoaded', () => {
     renderizarCatalogo(personajes); 
 });
+
+inputBuscar.addEventListener('input', (evento)=>{
+const textoBusqueda=evento.target.value.toLowerCase().trim()
+const personajesFiltrados=personajes.filter (personaje=>{
+    return personaje.nombre.toLowerCase().includes(textoBusqueda)
+});
+renderizarCatalogo(personajesFiltrados);
+});
+
+document.addEventListener('DOMContentLoaded',()=>{
+    renderizarCatalogo(personajes);
+});
+

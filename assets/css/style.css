@@ -1,8 +1,5 @@
 .card {
-  transition-transform:
-    0,
-    3 ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .card:hover {
   transform: translateY(-8px);
